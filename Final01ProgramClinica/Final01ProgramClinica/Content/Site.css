@@ -22,6 +22,7 @@ select,
 textarea {
     max-width: 280px;
 }
+
 body {
     padding-top: 50px;
     padding-bottom: 20px;
@@ -324,5 +325,4 @@ a {
 .pt-5, .py-5 {
     padding-top: 3rem !important;
 }
-
 

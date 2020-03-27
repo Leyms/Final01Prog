@@ -18,10 +18,18 @@ namespace Final01ProgramClinica.Controllers
             return View();
         }
 
-        public ActionResult Contact()
+        public ActionResult VstMantenimientos()
         {
-            ViewBag.Message = "Your contact page.";
+            return View();
+        }
 
+        public ActionResult VstProcesos()
+        {
+            return View();
+        }
+
+        public ActionResult VstConsulta()
+        {
             return View();
         }
     }
