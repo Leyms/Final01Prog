@@ -13,10 +13,8 @@ namespace Final01ProgramClinica.Controllers
             return View();
         }
 
-        public ActionResult About()
+        public ActionResult OpcionesGenerales()
         {
-            ViewBag.Message = "Your application description page.";
-
             return View();
         }
 
