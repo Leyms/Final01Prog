@@ -128,5 +128,16 @@ namespace Final01ProgramClinica.Controllers
             }
             base.Dispose(disposing);
         }
+
+        [HttpPost]
+        public JsonResult Buscador(int clavePaciente)
+        {
+            var duplicado = (from i in db.Ingresos
+                             join p in db.Pacientes
+                             on i.ID_Paciente equals p.ID_Paciente
+                             where i.ID_Paciente == clavePaciente
+                             select p.Nombre_Paciente).ToList();
+            return Json(duplicado);
+        }
     }
 }
