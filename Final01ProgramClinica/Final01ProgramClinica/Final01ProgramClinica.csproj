@@ -162,20 +162,20 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="ImgFinal\AltaMedica.jpg" />
+    <Content Include="ImgFinal\citamedica.jpg" />
+    <Content Include="ImgFinal\citamedica1.jpg" />
     <Content Include="ImgFinal\consulta.jpg" />
     <Content Include="ImgFinal\consultanew.png" />
     <Content Include="ImgFinal\doctores.jpg" />
-    <Content Include="ImgFinal\fondo1.jpeg" />
-    <Content Include="ImgFinal\fondo2.png" />
     <Content Include="ImgFinal\fondo3.jpg" />
     <Content Include="ImgFinal\habitacionescrud.jpg" />
+    <Content Include="ImgFinal\internamiento.jpg" />
     <Content Include="ImgFinal\logo1.jpg" />
-    <Content Include="ImgFinal\logo2.jpg" />
     <Content Include="ImgFinal\logo2new.png" />
     <Content Include="ImgFinal\logo3.png" />
     <Content Include="ImgFinal\logoCorazonazul.png" />
     <Content Include="ImgFinal\logoCorazonrojo.png" />
-    <Content Include="ImgFinal\mantenimiento.png" />
     <Content Include="ImgFinal\mantenimiento1.png" />
     <Content Include="ImgFinal\medicocrud.jpg" />
     <Content Include="ImgFinal\paciente crud.jpg" />
@@ -240,6 +240,7 @@
     <Content Include="Views\Pacientes\Index.cshtml" />
     <Content Include="Views\Home\OpcionesGenerales.cshtml" />
     <Content Include="Views\Home\VstMantenimientos.cshtml" />
+    <Content Include="Views\Home\VstProcesos.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

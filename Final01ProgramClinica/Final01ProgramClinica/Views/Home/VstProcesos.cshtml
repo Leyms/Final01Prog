@@ -1,8 +1,7 @@
 ﻿
 @{
-    ViewBag.Title = "VstMantenimientos";
+    ViewBag.Title = "VstProcesos";
 }
-
 
 
 
@@ -42,11 +41,10 @@
         &nbsp &nbsp &nbsp &nbsp &nbsp  &nbsp &nbsp &nbsp  &nbsp &nbsp &nbsp &nbsp &nbsp  &nbsp &nbsp &nbsp &nbsp &nbsp  &nbsp &nbsp &nbsp &nbsp &nbsp  &nbsp &nbsp &nbsp &nbsp &nbsp  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
         <a href="/Ley/AcercaDe" class="btn btn-danger">Acerca De 💡 </a>
     </div>*@
-
-<br />
+<br/>
 <div class="nav" style="background-color: #e3f2fd;">
     <nav class="navbar navbar-light bg-light" style="background-color: #e3f2fd;">
-        <a class="navbar-brand" style="background-color: #e3f2fd;">
+        <a class="navbar-brand" style="background-color: #e3f2fd;"  >
             <img src="~/imgfinal/logo2new.png" width="50" height="50" class="d-inline-block align-top" alt="">
             SELECCIONE LA OPCION QUE DESEA REALIZAR
             <img src="~/imgfinal/logo2new.png" width="50" height="50" class="d-inline-block align-top" alt="">
@@ -54,19 +52,21 @@
     </nav>
 
 </div>
+
+
 <div class="album py-5 bg-light">
     <div class="container">
 
         <div class="row">
             <div class="col-md-4">
                 <div class="card mb-4 shadow-sm" style="background-color: #f3e8e8;">
-                    <img src="~/ImgFinal/medicocrud.jpg" width="100%" height="225" />
+                    <img src="~/ImgFinal/citamedica.jpg" width="100%" height="225" />
                     <div class="card-body">
-                        <h4>Registro de médico</h4>
-                        <p class="card-text">Este es un instrumento empresarial utilizado en la selección de personal que se puede plasmar en forma de ficha de datos.</p>
+                        <h4>Citas Medicas</h4>
+                        <p class="card-text">Esta opcion le permite agendar al paciente una cita con su respectiva fecha y hora correspondiente.</p>
                         <div class="d-flex justify-content-between align-items-center">
                             <div class="btn-group">
-                                <a href="/Ley/Formulario" class="btn btn-info" style="background-color: #b40909;">Realizar registro Médico</a>
+                                <a href="/Ley/Formulario" class="btn btn-info" style="background-color: #b40909;">Crear Cita</a>
                             </div>
                         </div>
                     </div>
@@ -74,13 +74,13 @@
             </div>
             <div class="col-md-4">
                 <div class="card mb-4 shadow-sm" style="background-color: #f3e8e8;">
-                    <img src="~/ImgFinal/paciente crud.jpg" width="100%" height="225" />
+                    <img src="~/ImgFinal/internamiento.jpg" width="100%" height="225" />
                     <div class="card-body">
-                        <h4>Registrar pacientes</h4>
-                        <p class="card-text">Permite transformar el valor numérico de una magnitud física, expresado en una cierta unidad de medida, en otro valor numérico.</p>
+                        <h4>Ingresos Internamiento</h4>
+                        <p class="card-text">Esta opcion te permite asignarle una  habitcacion y dar inicio al internamiento.</p>
                         <div class="d-flex justify-content-between align-items-center">
                             <div class="btn-group">
-                                <a href="/Juancho/Conversor" class="btn btn-warning" style="background-color: #fdbc30;">Realizar registro Paciente</a>
+                                <a href="/Juancho/Conversor" class="btn btn-warning" style="background-color: #fdbc30;">Registrar Ingresos</a>
                             </div>
                         </div>
                     </div>
@@ -88,13 +88,13 @@
             </div>
             <div class="col-md-4">
                 <div class="card mb-4 shadow-sm" style="background-color: #f3e8e8;">
-                    <img src="~/ImgFinal/habitacionescrud.jpg" width="100%" height="225" />
+                    <img src="~/ImgFinal/AltaMedica.jpg" width="100%" height="225" />
                     <div class="card-body">
-                        <h4>Registro Habitaciones</h4>
-                        <p class="card-text">extensión para los archivos de hoja de cálculo utilizados en la aplicación Microsoft Excel. También es posible incluir gráficos.</p>
+                        <h4>Altas medicas</h4>
+                        <p class="card-text">En esta opcion te permite dar de Alta al paciente y verificar el costo total del internamiento.</p>
                         <div class="d-flex justify-content-between align-items-center">
                             <div class="btn-group">
-                                <a href="/Juancho/CargaExcel" class="btn btn-success" style="background-color: darkcyan;">Realizar registro Habitaciones</a>
+                                <a href="/Juancho/CargaExcel" class="btn btn-success" style="background-color: darkcyan;">Realizar Alta</a>
                             </div>
 
                         </div>
@@ -105,3 +105,5 @@
         </div>
     </div>
 </div>
+
+
