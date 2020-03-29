@@ -16,7 +16,8 @@
     @using (Html.BeginForm("Index", "Ingresos", FormMethod.Post))
     {
         <div style="margin: 0 auto;">
-            <h5>Busquedas</h5>
+            <div class="row" style="display"><h5>Busquedas</h5></div> 
+            <h5>Formato Fecha YYYY-MM-DD</h5> 
 
             <div class="row">
                 @Html.TextBox("busqueda", "", new { @class = "form-control mb-2", placeholder = "Buscar" })

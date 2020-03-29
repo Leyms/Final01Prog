@@ -23,13 +23,19 @@ namespace Final01ProgramClinica.Controllers
         [HttpPost]
         public ActionResult Index(string busqueda, string select)
         {
-            if (select == "ID_Habitacion")
+            if (busqueda == string.Empty)
             {
-                var ext = (from ex in db.Habitaciones where ex.Num_Habitacion == busqueda select ex).First().ID_Habitacion;
-                string x = ext.ToString();
-                int y = int.Parse(x);
+                return View(db.Ingresos.ToList());
+            }
 
-                var ingresos = db.Ingresos.Include(c => c.Habitacion).Include(c => c.Pacientes).Where(a => a.Habitacion.Equals(y));
+            else if (select == "ID_Habitacion")
+            {
+                int s = (from g in db.Habitaciones where g.Num_Habitacion == busqueda select g.ID_Habitacion).SingleOrDefault();               
+                //var ext = (from ex in db.Habitaciones where ex.Num_Habitacion == busqueda select ex).First().ID_Habitacion;
+                //string x = ext.ToString();
+                //int y = int.Parse(x);
+
+                var ingresos = db.Ingresos.Include(c => c.Habitacion).Include(c => c.Pacientes).Where(a => a.ID_Habitacion.Equals(s));
                 return View(ingresos.ToList());
             }
            else if (select == "Fecha_Ingreso")
