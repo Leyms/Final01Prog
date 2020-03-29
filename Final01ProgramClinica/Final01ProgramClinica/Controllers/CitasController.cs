@@ -27,18 +27,20 @@ namespace Final01ProgramClinica.Controllers
 
             if (select == "Nombre_Medico")
             {
-                var abc = from a in db.Medicos                              
-                          select a;
-                abc = abc.Where(s => s.Nombre_Medico.Contains(busqueda));
-                return View(abc);
+                int s = (from g in db.Medicos where g.Nombre_Medico == busqueda select g.ID_Medico).SingleOrDefault();
+                //var ext = (from ex in db.Habitaciones where ex.Num_Habitacion == busqueda select ex).First().ID_Habitacion;
+                //string x = ext.ToString();
+                //int y = int.Parse(x);
+                var citas = db.Citas.Include(c => c.Medicos).Include(c => c.Pacientes).Where(a => a.ID_Medico.Equals(s));
+                return View(citas.ToList());
+                
             }
             else if (select == "Nombre_Paciente")
             {
-                var abc = from a in db.Pacientes
-                          where a.Nombre_Paciente == busqueda
-                          select a;
-
-                return View(abc);
+                int s = (from g in db.Pacientes where g.Nombre_Paciente == busqueda select g.ID_Paciente).SingleOrDefault();
+               
+                var citas = db.Citas.Include(c => c.Medicos).Include(c => c.Pacientes).Where(a => a.ID_Paciente.Equals(s));
+                return View(citas.ToList());
             }
             else if (select == "Fecha_Cita")
             {
@@ -46,7 +48,7 @@ namespace Final01ProgramClinica.Controllers
                 return View(citas.ToList());
             }
 
-            return View(db.Citas.ToList());
+            return View(db.Citas.Include(c => c.Medicos).Include(d=>d.Pacientes).ToList());
 
         }
 
