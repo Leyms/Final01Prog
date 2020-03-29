@@ -128,15 +128,47 @@ namespace Final01ProgramClinica.Controllers
             }
             base.Dispose(disposing);
         }
-
+        
         [HttpPost]
-        public JsonResult Buscador(int clavePaciente)
+
+        public JsonResult Nombre(int clavePaciente)
         {
             var duplicado = (from i in db.Ingresos
                              join p in db.Pacientes
                              on i.ID_Paciente equals p.ID_Paciente
-                             where i.ID_Paciente == clavePaciente
+                             where i.ID_Ingresos == clavePaciente
                              select p.Nombre_Paciente).ToList();
+            return Json(duplicado);
+        }
+
+        public JsonResult Monto(int clavePaciente)
+        {
+
+            var duplicado = (from i in db.Ingresos
+                             join h in db.Habitaciones
+                             on i.ID_Habitacion equals h.ID_Habitacion
+                             where i.ID_Ingresos == clavePaciente
+                             select h.PrecioDia_Habitacion).ToList();
+            return Json(duplicado);
+        }
+
+        public JsonResult FechaIngreso(int clavePaciente)
+        {
+
+            var duplicado = (from i in db.Ingresos
+                             where i.ID_Ingresos == clavePaciente
+                             select i.Fecha_Ingreso).ToList();
+            return Json(duplicado);
+        }
+
+        public JsonResult NumeroHabitacion(int clavePaciente)
+        {
+
+            var duplicado = (from i in db.Ingresos
+                             join h in db.Habitaciones
+                             on i.ID_Habitacion equals h.ID_Habitacion
+                             where i.ID_Ingresos == clavePaciente
+                             select h.Num_Habitacion).ToList();
             return Json(duplicado);
         }
     }

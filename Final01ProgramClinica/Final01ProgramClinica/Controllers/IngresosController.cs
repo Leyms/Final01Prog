@@ -20,6 +20,29 @@ namespace Final01ProgramClinica.Controllers
             var ingresos = db.Ingresos.Include(c => c.Habitacion).Include(c => c.Pacientes);
             return View(ingresos.ToList());
         }
+        [HttpPost]
+        public ActionResult Index(string busqueda, string select)
+        {
+            if (select == "ID_Habitacion")
+            {
+                var ext = (from ex in db.Habitaciones where ex.Num_Habitacion == busqueda select ex).First().ID_Habitacion;
+                string x = ext.ToString();
+                int y = int.Parse(x);
+
+                var ingresos = db.Ingresos.Include(c => c.Habitacion).Include(c => c.Pacientes).Where(a => a.Habitacion.Equals(y));
+                return View(ingresos.ToList());
+            }
+           else if (select == "Fecha_Ingreso")
+            {
+                var ingresos = db.Ingresos.Include(c => c.Habitacion).Include(c => c.Pacientes).Where(a=>a.Fecha_Ingreso == busqueda);
+                return View(ingresos.ToList());
+            }
+
+            return View(db.Ingresos.ToList());
+
+        }
+
+
 
         // GET: Ingresos/Details/5
         public ActionResult Details(int? id)
