@@ -24,8 +24,18 @@ namespace Final01ProgramClinica.Controllers
         [HttpPost]
         public ActionResult Index(string busqueda, string select)
         {
+            if (busqueda == string.Empty)
+            {
+                var citas = db.Citas.Include(c => c.Medicos).Include(c => c.Pacientes);
+                return View(citas.ToList());
+            }
+            else if (select == string.Empty)
+            {
+                var citas = db.Citas.Include(c => c.Medicos).Include(c => c.Pacientes);
+                return View(citas.ToList());
+            }
 
-            if (select == "Nombre_Medico")
+            else if (select == "Nombre_Medico")
             {
                 int s = (from g in db.Medicos where g.Nombre_Medico == busqueda select g.ID_Medico).SingleOrDefault();
                 //var ext = (from ex in db.Habitaciones where ex.Num_Habitacion == busqueda select ex).First().ID_Habitacion;
@@ -48,7 +58,7 @@ namespace Final01ProgramClinica.Controllers
                 return View(citas.ToList());
             }
 
-            return View(db.Citas.Include(c => c.Medicos).Include(d=>d.Pacientes).ToList());
+            return View(db.Citas.ToList());
 
         }
 

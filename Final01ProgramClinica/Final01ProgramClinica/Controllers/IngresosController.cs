@@ -25,7 +25,13 @@ namespace Final01ProgramClinica.Controllers
         {
             if (busqueda == string.Empty)
             {
-                return View(db.Ingresos.ToList());
+                var ingresos = db.Ingresos.Include(c => c.Habitacion).Include(c => c.Pacientes);
+                return View(ingresos.ToList());
+            }
+            else if (select == string.Empty)
+            {
+                var ingresos = db.Ingresos.Include(c => c.Habitacion).Include(c => c.Pacientes);
+                return View(ingresos.ToList());
             }
 
             else if (select == "ID_Habitacion")
@@ -45,6 +51,7 @@ namespace Final01ProgramClinica.Controllers
             }
 
             return View(db.Ingresos.ToList());
+            
 
         }
 
