@@ -21,6 +21,35 @@ namespace Final01ProgramClinica.Controllers
             return View(citas.ToList());
         }
 
+        [HttpPost]
+        public ActionResult Index(string busqueda, string select)
+        {
+
+            if (select == "Nombre_Medico")
+            {
+                var abc = from a in db.Medicos                              
+                          select a;
+                abc = abc.Where(s => s.Nombre_Medico.Contains(busqueda));
+                return View(abc);
+            }
+            else if (select == "Nombre_Paciente")
+            {
+                var abc = from a in db.Pacientes
+                          where a.Nombre_Paciente == busqueda
+                          select a;
+
+                return View(abc);
+            }
+            else if (select == "Fecha_Cita")
+            {
+                var citas = db.Citas.Include(c => c.Medicos).Include(c => c.Pacientes).Where(a => a.Fecha_Cita == busqueda); 
+                return View(citas.ToList());
+            }
+
+            return View(db.Citas.ToList());
+
+        }
+
         // GET: Citas/Details/5
         public ActionResult Details(int? id)
         {

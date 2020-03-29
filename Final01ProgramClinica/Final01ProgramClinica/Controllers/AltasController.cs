@@ -20,7 +20,30 @@ namespace Final01ProgramClinica.Controllers
             var altas = db.Altas.Include(c => c.Ingresos);
             return View(altas.ToList());
         }
+        [HttpPost]
+        public ActionResult Index(string busqueda, string select)
+        {
+            if (select == "Paciente")
+            {
+                var altas = db.Altas.Include(c => c.Ingresos).Where(a => a.Nombre_Paciente == busqueda);
+                return View(altas.ToList());
+                //var abc = from a in db.Altas
+                //          where a.Nombre_Paciente == busqueda
+                //          select a;
 
+                //return View(abc);
+            }
+            else if (select == "Fecha")
+            {
+                var altas = db.Altas.Include(c => c.Ingresos).Where(a => a.Fecha_Ingreso == busqueda);
+                return View(altas.ToList());
+                //var citas = db.Citas.Include(c => c.Medicos).Include(c => c.Pacientes).Where(a => a.Fecha_Cita == busqueda); ;
+                //return View(citas.ToList());
+            }
+
+            return View(db.Altas.ToList());
+
+        }
         // GET: Altas/Details/5
         public ActionResult Details(int? id)
         {
