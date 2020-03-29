@@ -11,6 +11,29 @@
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
+
+<p>
+    @using (Html.BeginForm("Index", "Habitaciones", FormMethod.Post))
+    {
+        <div style="margin: 0 auto;">
+            <h5>Busquedas</h5>
+
+            <div class="row">
+                @*@Html.TextBox("busqueda", "", new { @class = "form-control mb-2", placeholder = "Buscar" })*@
+                <select name="select" class="form-control col col-lg-2">
+                <option value="">Tipo de habitacion</option>
+                <option value="Doble">Doble</option>
+                <option value="privada">Privada</option>
+                <option value="Suite">Suite</option>
+                </select>
+                <div class="col-2">
+                    <button type="submit" class="btn btn-success">✔️</button>
+                </div>
+            </div>
+        </div>
+    }
+</p>
+<br/>
 <table class="table">
     <tr>
         <th>
