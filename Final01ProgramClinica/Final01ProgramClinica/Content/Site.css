@@ -17,7 +17,14 @@
 .dl-horizontal dt {
     white-space: normal;
 }
+.myBtn {
+    margin: 10px 10px;
+    color: #fff !important;
+}
 
+ .myBtn:hover {
+        color: #fff !important;
+    }
 /* Set width on the form input elements since they're 100% wide by default */
 input,
 select,

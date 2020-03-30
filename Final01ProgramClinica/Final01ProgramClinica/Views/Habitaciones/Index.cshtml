@@ -40,7 +40,7 @@
     }
 </p>
 <br/>
-<table class="table">
+<table class="table table-striped">
     <tr>
         <th>
             @Html.DisplayNameFor(model => model.Num_Habitacion)
@@ -65,10 +65,13 @@
         <td>
             @Html.DisplayFor(modelItem => item.PrecioDia_Habitacion)
         </td>
+
+
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.ID_Habitacion }) |
-            @Html.ActionLink("Details", "Details", new { id=item.ID_Habitacion }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.ID_Habitacion })
+
+            @Html.ActionLink("Edit", "Edit", new { id = item.ID_Habitacion }) |
+            @Html.ActionLink("Details", "Details", new { id = item.ID_Habitacion }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.ID_Habitacion })
         </td>
     </tr>
 }

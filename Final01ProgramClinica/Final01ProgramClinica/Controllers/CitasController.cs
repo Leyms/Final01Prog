@@ -86,7 +86,7 @@ namespace Final01ProgramClinica.Controllers
         public ActionResult Create()
         {
             ViewBag.ID_Medico = new SelectList(db.Medicos, "ID_Medico", "Nombre_Medico");
-            ViewBag.ID_Paciente = new SelectList(db.Pacientes, "ID_Paciente", "Nombre_Paciente");
+            ViewBag.ID_Paciente = new SelectList(db.Pacientes, "ID_Paciente", "ID_Paciente");
             return View();
         }
 
