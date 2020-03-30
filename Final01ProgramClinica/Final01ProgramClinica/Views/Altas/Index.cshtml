@@ -19,11 +19,13 @@
 <p>
     @using (Html.BeginForm("Index", "Altas", FormMethod.Post))
     {
+    
         <div style="margin: 0 auto;">
             <h5>Busquedas</h5>
             <h5>Formato Fecha YYYY-MM-DD</h5>
             <div class="row">
                 @Html.TextBox("busqueda", "", new { @class = "form-control mb-2", placeholder = "Buscar" })
+            
                 <select name="select" class="form-control mb-2">
                     <option value="">Elige una opcion</option>
                     <option value="Paciente">Paciente</option>
@@ -82,11 +84,11 @@
             <td>
                 @Html.DisplayFor(modelItem => item.Monto)
             </td>
-            <td>
+            @*<td>
                 @Html.ActionLink("Edit", "Edit", new { id = item.ID_Altas }) |
                 @Html.ActionLink("Details", "Details", new { id = item.ID_Altas }) |
                 @Html.ActionLink("Delete", "Delete", new { id = item.ID_Altas })
-            </td>
+            </td>*@
         </tr>
     }
 

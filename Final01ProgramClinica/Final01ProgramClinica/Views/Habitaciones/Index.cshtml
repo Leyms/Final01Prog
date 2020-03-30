@@ -13,7 +13,7 @@
 </p>
 <p>
     @*@Html.ActionLink("Create New", "Create")*@
-    @*@Html.ActionLink("Impresion", "imprimir")*@
+  
     <a href="@Url.Action("Create", "Habitaciones")" class="btn btn-success">Crear uno nuevo</a>
     <a href="@Url.Action("imprimir", "Habitaciones")" class="btn btn-danger">Convertir a PDF</a>
 </p>
@@ -22,7 +22,7 @@
     @using (Html.BeginForm("Index", "Habitaciones", FormMethod.Post))
     {
         <div style="margin: 0 auto;">
-            <h5>Busquedas</h5>
+            <h5>Busquedas.</h5>
 
             <div class="row">
                 @*@Html.TextBox("busqueda", "", new { @class = "form-control mb-2", placeholder = "Buscar" })*@
