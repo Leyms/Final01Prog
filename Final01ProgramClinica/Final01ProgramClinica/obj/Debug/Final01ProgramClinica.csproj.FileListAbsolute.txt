@@ -82,3 +82,4 @@ C:\Users\Dell\Desktop\Admin\5to cuatri\Prog3\Final01\Final01Prog\Final01ProgramC
 C:\Users\Dell\Desktop\Admin\5to cuatri\Prog3\Final01\Final01Prog\Final01ProgramClinica\Final01ProgramClinica\obj\Debug\Final01ProgramClinica.csproj.CopyComplete
 C:\Users\Dell\Desktop\Admin\5to cuatri\Prog3\Final01\Final01Prog\Final01ProgramClinica\Final01ProgramClinica\obj\Debug\Final01ProgramClinica.dll
 C:\Users\Dell\Desktop\Admin\5to cuatri\Prog3\Final01\Final01Prog\Final01ProgramClinica\Final01ProgramClinica\obj\Debug\Final01ProgramClinica.pdb
+C:\Users\Dell\Desktop\Admin\5to cuatri\Prog3\Final01\Final01Prog\Final01ProgramClinica\Final01ProgramClinica\bin\Rotativa.dll
