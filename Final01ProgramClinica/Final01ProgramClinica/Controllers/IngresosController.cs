@@ -21,6 +21,12 @@ namespace Final01ProgramClinica.Controllers
             var ingresos = db.Ingresos.Include(c => c.Habitacion).Include(c => c.Pacientes);
             return View(ingresos.ToList());
         }
+
+        public ActionResult imprimir()
+        {
+            var print = new ActionAsPdf("Index");
+            return print;
+        }
         [HttpPost]
         public ActionResult Index(string busqueda, string select)
         {
