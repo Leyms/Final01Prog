@@ -21,6 +21,11 @@ namespace Final01ProgramClinica.Controllers
             var altas = db.Altas.Include(c => c.Ingresos);
             return View(altas.ToList());
         }
+        public ActionResult imprimir()
+        {
+            var print = new ActionAsPdf("Index");
+            return print;
+        }
         [HttpPost]
         public ActionResult Index(string busqueda, string select)
         {
