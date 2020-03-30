@@ -29,9 +29,6 @@ namespace Final01ProgramClinica.Controllers
             return View();
         }
 
-        public ActionResult VstConsulta()
-        {
-            return View();
-        }
+      
     }
 }

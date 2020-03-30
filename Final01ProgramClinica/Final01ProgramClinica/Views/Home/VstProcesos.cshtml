@@ -1,9 +1,9 @@
 ﻿
 @{
-                /**/
-
-                ViewBag.Title = "VstProcesos";
+    ViewBag.Title = "VstProcesos";
 }
+
+
 
 <link href="Site.css" rel="stylesheet">
 <head>
@@ -35,12 +35,11 @@
         $('.carousel').carousel()
     </script>
 </head>
+
 <br/>
-<br />
 <div class="nav" style="background-color: #e3f2fd;">
     <nav class="navbar navbar-light bg-light" style="background-color: #e3f2fd;">
-        <a class="navbar-brand" style="background-color: #e3f2fd;">
-            &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+        <a class="navbar-brand" style="background-color: #e3f2fd;"  >
             <img src="~/imgfinal/logo2new.png" width="50" height="50" class="d-inline-block align-top" alt="">
             SELECCIONE LA OPCION QUE DESEA REALIZAR
             <img src="~/imgfinal/logo2new.png" width="50" height="50" class="d-inline-block align-top" alt="">
@@ -61,7 +60,7 @@
                         <p class="card-text">Esta opcion le permite agendar al paciente una cita con su respectiva fecha y hora correspondiente.</p>
                         <div class="d-flex justify-content-between align-items-center">
                             <div class="btn-group">
-                                <a href="~/Citas/Create" class="btn btn-info" style="background-color: #b40909;">Crear Cita</a>
+                                <a href="/Ley/Formulario" class="btn btn-info" style="background-color: #b40909;">Crear Cita</a>
                             </div>
                         </div>
                     </div>
@@ -75,7 +74,7 @@
                         <p class="card-text">Esta opcion te permite asignarle una  habitcacion y dar inicio al internamiento.</p>
                         <div class="d-flex justify-content-between align-items-center">
                             <div class="btn-group">
-                                <a href="~/Ingresos/Create" class="btn btn-warning" style="background-color: #fdbc30;">Registrar Ingresos</a>
+                                <a href="/Juancho/Conversor" class="btn btn-warning" style="background-color: #fdbc30;">Registrar Ingresos</a>
                             </div>
                         </div>
                     </div>
@@ -89,7 +88,7 @@
                         <p class="card-text">En esta opcion te permite dar de Alta al paciente y verificar el costo total del internamiento.</p>
                         <div class="d-flex justify-content-between align-items-center">
                             <div class="btn-group">
-                                <a href="~/Altas/Create" class="btn btn-success" style="background-color: darkcyan;">Realizar Alta</a>
+                                <a href="/Juancho/CargaExcel" class="btn btn-success" style="background-color: darkcyan;">Realizar Alta</a>
                             </div>
 
                         </div>
