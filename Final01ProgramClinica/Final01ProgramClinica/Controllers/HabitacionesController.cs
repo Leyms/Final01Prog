@@ -7,6 +7,7 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using Final01ProgramClinica.Models;
+using Rotativa;
 
 namespace Final01ProgramClinica.Controllers
 {
@@ -19,7 +20,11 @@ namespace Final01ProgramClinica.Controllers
         {
             return View(db.Habitaciones.ToList());
         }
-
+        public ActionResult imprimir()
+        {
+            var print = new ActionAsPdf("Index");
+            return print;
+        }
         [HttpPost]
         public ActionResult Index(string select)
         {

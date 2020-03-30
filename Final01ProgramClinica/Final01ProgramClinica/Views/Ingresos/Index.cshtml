@@ -8,20 +8,25 @@
 <br />
 <br />
 
-<p>
+@*<p>
     @Html.ActionLink("Create New", "Create")
+</p>*@
+<p>
+    @*@Html.ActionLink("Create New", "Create")*@
+    @*@Html.ActionLink("Impresion", "imprimir")*@
+    <a href="@Url.Action("Create", "Ingresos")" class="btn btn-success">Crear uno nuevo</a>
+    <a href="@Url.Action("imprimir", "Ingresos")" class="btn btn-danger">Convertir a PDF</a>
 </p>
-
 <p>
     @using (Html.BeginForm("Index", "Ingresos", FormMethod.Post))
     {
         <div style="margin: 0 auto;">
-            <div class="row" style="display"><h5>Busquedas</h5></div> 
-            <h5>Formato Fecha YYYY-MM-DD</h5> 
+            <div class="row" style="display"><h5>Busquedas</h5></div>
+            <h5>Formato Fecha YYYY-MM-DD</h5>
 
             <div class="row">
                 @Html.TextBox("busqueda", "", new { @class = "form-control mb-2", placeholder = "Buscar" })
-                <select name="select" class="form-control col col-lg-2">
+                <select name="select" class="form-control mb-2">
                     <option value="">Elige una opcion</option>
                     <option value="Fecha_Ingreso">Fecha</option>
                     <option value="ID_Habitacion">Habitacion</option>
