@@ -8,29 +8,34 @@
 <br/>
 <br/>
 
-<p>
+@*<p>
     @Html.ActionLink("Create New", "Create")
+</p>*@
+<p>
+    @*@Html.ActionLink("Create New", "Create")*@
+    @*@Html.ActionLink("Impresion", "imprimir")*@
+    <a href="@Url.Action("Create", "Citas")" class="btn btn-success">Crear uno nuevo</a>
+    <a href="@Url.Action("imprimir", "Citas")" class="btn btn-danger">Convertir a PDF</a>
 </p>
-
 <p>
     @using (Html.BeginForm("Index", "Citas", FormMethod.Post))
     {
-        <div style="margin: 0 auto;">
-            <h5>Busquedas</h5>
-
-            <div class="row">
-                @Html.TextBox("busqueda", "", new { @class = "form-control mb-2", placeholder = "Buscar" })
-                <select name="select" class="form-control col col-lg-2">
-                    <option value="">Elige una opcion</option>
-                    <option value="Nombre_Medico">Doctor</option>
-                    <option value="Nombre_Paciente">Paciente</option>
-                    <option value="Fecha_Cita">Fecha</option>
-                </select>
-                <div class="col-2">
-                    <button type="submit" class="btn btn-success">✔️</button>
-                </div>
+    <div style="margin: 0 auto;">
+        <h5>Busquedas</h5>
+        <h5>Formato Fecha YYYY-MM-DD</h5>
+        <div class="row">
+            @Html.TextBox("busqueda", "", new { @class = "form-control mb-2", placeholder = "Buscar" })
+            <select name="select" class="form-control mb-2">
+                <option value="">Elige una opcion</option>
+                <option value="Nombre_Medico">Doctor</option>
+                <option value="Nombre_Paciente">Paciente</option>
+                <option value="Fecha_Cita">Fecha</option>
+            </select>
+            <div class="col-2">
+                <button type="submit" class="btn btn-success">✔️</button>
             </div>
         </div>
+    </div>
     }
 </p>
 <br/>

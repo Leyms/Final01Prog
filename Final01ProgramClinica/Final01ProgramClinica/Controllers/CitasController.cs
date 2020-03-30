@@ -21,7 +21,11 @@ namespace Final01ProgramClinica.Controllers
             var citas = db.Citas.Include(c => c.Medicos).Include(c => c.Pacientes);
             return View(citas.ToList());
         }
-
+        public ActionResult imprimir()
+        {
+            var print = new ActionAsPdf("Index");
+            return print;
+        }
         [HttpPost]
         public ActionResult Index(string busqueda, string select)
         {
